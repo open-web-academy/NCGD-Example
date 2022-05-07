@@ -1,0 +1,12 @@
+/Users/yairnava/Desktop/example-videogame/target/wasm32-unknown-unknown/release/deps/borsh-d566b7b7c2a4689c.rmeta: /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/lib.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/mod.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/hint.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema_helpers.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/ser/mod.rs
+
+/Users/yairnava/Desktop/example-videogame/target/wasm32-unknown-unknown/release/deps/libborsh-d566b7b7c2a4689c.rlib: /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/lib.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/mod.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/hint.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema_helpers.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/ser/mod.rs
+
+/Users/yairnava/Desktop/example-videogame/target/wasm32-unknown-unknown/release/deps/borsh-d566b7b7c2a4689c.d: /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/lib.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/mod.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/hint.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema_helpers.rs /Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/ser/mod.rs
+
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/lib.rs:
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/mod.rs:
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/de/hint.rs:
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema.rs:
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/schema_helpers.rs:
+/Users/yairnava/.cargo/registry/src/github.com-1ecc6299db9ec823/borsh-0.8.1/src/ser/mod.rs:
