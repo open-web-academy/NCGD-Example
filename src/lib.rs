@@ -94,12 +94,33 @@ impl Contract {
     }
 
     // Obtener todas las puntuaciones de los jugadores
-    pub fn obtener_puntuaciones(&self) {
+    pub fn obtener_puntuaciones(&self) -> Vec<Puntuacion> {
         env::log(
             json!(self.puntuaciones.clone())
             .to_string()
             .as_bytes(),
         );
+
+        let map : HashMap<String,Puntuacion> = self.puntuaciones.clone()
+        .into_iter()
+        .collect();
+
+        let mut puntuaciones = vec![];
+
+        for (k, v) in map.iter() {
+            let puntuacion = self.puntuaciones.get(&k.to_string());   
+
+            let info = puntuacion.unwrap();
+
+            let info_puntuacion = Puntuacion {
+                id_jugador : info.id_jugador.to_string(),
+                puntuacion : info.puntuacion.to_string()
+            };
+
+            puntuaciones.push(info_puntuacion);
+        }
+
+        puntuaciones
     }
 
 
