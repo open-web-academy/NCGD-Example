@@ -48,13 +48,27 @@ impl Contract {
     }
 
     // Obtener puntuación del jugador
-    pub fn obtener_puntuacion(&self) -> Puntuacion {
-        let jugador = env::signer_account_id();
+    pub fn obtener_puntuacion(&self, owner_id: String) -> Puntuacion {
+        let jugador = owner_id;
 
         let puntuacion = self.puntuaciones.get(&jugador.to_string());
         
         if puntuacion.is_none() {
-            env::panic_str("Esta cuenta no tiene puntuación");
+            // env::panic_str("Esta cuenta no tiene puntuación");
+
+            let info_puntuacion_none = Puntuacion {
+                id_jugador : jugador.to_string(),
+                puntuacion : 0.to_string()
+            };
+    
+            env::log(
+                json!(info_puntuacion_none.clone())
+                .to_string()
+                .as_bytes(),
+            );
+    
+            return info_puntuacion_none;
+
         }
 
         let info = puntuacion.unwrap();
@@ -77,20 +91,42 @@ impl Contract {
     pub fn guardar_puntuacion(&mut self, puntuacion: u64) -> Puntuacion {
         let jugador = env::signer_account_id();
 
-        let info_puntuacion = Puntuacion {
-            id_jugador : jugador.to_string(),
-            puntuacion : puntuacion.to_string()
-        };
+        let old_puntuacion = self.puntuaciones.get(&jugador.to_string());
+        if old_puntuacion.is_none() {
+            let new_info_puntuacion = Puntuacion {
+                id_jugador : jugador.clone().to_string(),
+                puntuacion : puntuacion.to_string()
+            };
+            self.puntuaciones.insert(jugador.clone().to_string(),new_info_puntuacion.clone());
 
-        self.puntuaciones.insert(jugador.clone().to_string(),info_puntuacion.clone());
+            env::log(
+                json!(new_info_puntuacion.clone())
+                .to_string()
+                .as_bytes(),
+            );
+    
+            return new_info_puntuacion;
+        } else {
+            let old_info = old_puntuacion.unwrap();
+            let new_info_puntuacion = Puntuacion {
+                id_jugador : jugador.clone().to_string(),
+                puntuacion : puntuacion.to_string()
+            };
 
-        env::log(
-            json!(info_puntuacion.clone())
-            .to_string()
-            .as_bytes(),
-        );
+            if puntuacion > old_info.puntuacion.clone().parse::<u64>().unwrap()  {
+                self.puntuaciones.insert(jugador.clone().to_string(),new_info_puntuacion.clone());
+            }
 
-        info_puntuacion
+           
+
+            env::log(
+                json!(new_info_puntuacion.clone())
+                .to_string()
+                .as_bytes(),
+            );
+    
+            return new_info_puntuacion;
+        }
     }
 
     // Obtener todas las puntuaciones de los jugadores
@@ -122,6 +158,5 @@ impl Contract {
 
         puntuaciones
     }
-
 
 }

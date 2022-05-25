@@ -11,8 +11,8 @@ Obtener todas las puntuaciones:
 
 Obtener puntuacion de jugador:
 
-    near call $ID obtener_puntuacion '{}' --accountId yairnava.testnet
+    near call $ID obtener_puntuacion '{"owner_id":"'yairnava.testnet'"}' --accountId yairnava.testnet
 
 Guardar puntuación
 
-    near call $ID guardar_puntuacion '{"puntuacion": 30}' --accountId yairnava.testnet
+    near call $ID guardar_puntuacion '{"puntuacion": 40}' --accountId yairnava.testnet
